@@ -1,4 +1,3 @@
-import axios from 'axios'
 import axiosInstance from '../api/axios';
 
 export const getUsers = async () => {
@@ -15,5 +14,10 @@ export const createUser = async (newUser) => {
         '/users',
         newUser
     )
+    return res.data
+}
+
+export const deleteUser = async (id)=>{
+    const res = await axiosInstance.delete(`/users/${id}`)
     return res.data
 }

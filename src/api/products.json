@@ -1,0 +1,184 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Ketchup",
+            "img": "https://tanhoholding.uz/wp-content/uploads/2023/10/bolshe-uksusa.png",
+            "price": 15000
+        },
+        {
+            "id": 2,
+            "title": "Pampers",
+            "img": "https://cdn.flymart.uz/file/hub/file/2024/4/26/2fdJ3DSLICEA5lDRdXN3EmWopA3.jpg",
+            "price": 70000
+        },
+        {
+            "id": 3,
+            "title": "Makaron",
+            "img": "https://strgimgr.umico.az/img/product/840/7afd9d23-cc0b-470b-bfe0-8f86151c5d24.jpeg",
+            "price": 30000
+        },
+        {
+            "id": 4,
+            "title": "Pomidor",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
+            "price": 1000
+        },
+        {
+            "id": 5,
+            "title": "Coca Cola 1.5L",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9V2mx3za9QOchroN30wFGlZuhLhA2D7wc2A&s",
+            "price": 11000
+        },
+        {
+            "id": 6,
+            "title": "Pepsi 1.5L",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BBZ57sK8AXr1LjhuXu0QWQvnuU5HLOI3Ow&s",
+            "price": 11000
+        },
+        {
+            "id": 7,
+            "title": "Fanta 1.5L",
+            "img": "https://images.uzum.uz/cegsr3ivtie1lhbf8afg/original.jpg",
+            "price": 11000
+        },
+        {
+            "id": 8,
+            "title": "Sprite 1.5L",
+            "img": "https://dostavo4ka.uz/upload-file/2021/05/05/5729/750x750-25d8aeea-6691-4d1f-bf36-1be59dd65459.jpg",
+            "price": 11000
+        },
+        {
+            "id": 9,
+            "title": "Red Bull energetik",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/8.4_floz_can_of_Red_Bull_Energy_Drink.jpg/330px-8.4_floz_can_of_Red_Bull_Energy_Drink.jpg",
+            "price": 20000
+        },
+        {
+            "id": 10,
+            "title": "Nan 1",
+            "img": "https://babymarket.uz/wp-content/uploads/2020/05/7613032405700_-nan-1-800.jpg",
+            "price": 98000
+        },
+        {
+            "id": 11,
+            "title": "Nan 2",
+            "img": "https://babymarket.uz/wp-content/uploads/2020/05/7613032477530_-nan-2-800.jpg",
+            "price": 115000
+        },
+        {
+            "id": 12,
+            "title": "Nan 3",
+            "img": "https://babymarket.uz/wp-content/uploads/2020/05/7613032476175__-nan-3-400.jpg",
+            "price": 130000
+        },
+        {
+            "id": 13,
+            "title": "Salfetka",
+            "img": "https://markermarket.uz/thumb/2/yxpralN0F3q8aJALjd204A/r/d/elma-qu.jpg",
+            "price": 15000
+        },
+        {
+            "id": 14,
+            "title": "Ho'l salfetka",
+            "img": "https://markermarket.uz/thumb/2/jT23ggGyRf9vMmo0mBNz7Q/r/d/511-02.png",
+            "price": 19000
+        },
+        {
+            "id": 15,
+            "title": "Shakar",
+            "img": "https://bozorcom.ams3.cdn.digitaloceanspaces.com/media/filer_public/61/49/61490151-6140-4131-b9a7-739fe48a968b/angren-shakar-2k.jpg",
+            "price": 25000
+        },
+        {
+            "id": 16,
+            "title": "Tuz",
+            "img": "https://dostavo4ka.uz/upload-file/2021/05/05/3305/750x750-e603b637-98f9-4d1d-8acb-6f2310696c51.jpg",
+            "price": 10000
+        },
+        {
+            "id": 17,
+            "title": "Un",
+            "img": "https://bozorcom.ams3.cdn.digitaloceanspaces.com/media/filer_public/f1/16/f1167944-0d67-4b0b-b3ab-c80ba8b26bf4/altin-dan-shimkent-oliy-nav-50kg.jpg",
+            "price": 15000
+        },
+        {
+            "id": 18,
+            "title": "Mosh",
+            "img": "https://backend.magnit.tj/uploads/images/607ba78a4396991434d4899dda2fcbd1-1024x1024.jpg",
+            "price": 15000
+        },
+        {
+            "id": 19,
+            "title": "Snikers",
+            "img": "https://www.snickers.com/sites/g/files/fnmzdf616/files/migrate-product-files/dryeqrv2efldaaoyceat.png",
+            "price": 9500
+        },
+        {
+            "id": 20,
+            "title": "Strobar",
+            "img": "https://nmedov.uz/wp-content/uploads/2022/03/1727451004_strobar.png",
+            "price": 5500
+        },
+        {
+            "id": 21,
+            "title": "Mars shokolad",
+            "img": "https://backend.magnit.tj/uploads/images/68b3096985e4f630930f6cd316f0fb11-1024x1024.jpg",
+            "price": 8500
+        },
+        {
+            "id": 22,
+            "title": "Bounty",
+            "img": "https://dostavo4ka.uz/upload-file/2021/05/05/1207/695b9418-dd1c-41cd-b375-bfc7e97e2ba2.jpg",
+            "price": 10500
+        },
+        {
+            "id": 23,
+            "title": "Alpen Gold plitka shokolad",
+            "img": "https://ir.ozone.ru/s3/multimedia-w/6616031996.jpg",
+            "price": 15500
+        },
+        {
+            "id": 24,
+            "title": "Oreo",
+            "img": "https://yastatic.net/avatars/get-grocery-goods/2888787/bceaec69-a0fc-4223-a075-8289bd2b56d4/300x300?webp=true",
+            "price": 10000
+        },
+        {
+            "id": 25,
+            "title": "Adrenalin energetik",
+            "img": "https://api.lochin.uz/media/file/image/2020-08/e7367f29-48ce-4af7-9469-72744ce40605.jpg.500x500_q85_crop-scale.jpg",
+            "price": 19000
+        },
+        {
+            "id": 26,
+            "title": "Monster energetik",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Monster_Energy_drink_%28cropped%29.jpg/960px-Monster_Energy_drink_%28cropped%29.jpg",
+            "price": 17000
+        },
+        {
+            "id": 27,
+            "title": "Flesh energetik",
+            "img": "https://dostavo4ka.uz/upload-file/2021/05/05/493/c07a1652-3982-44aa-8eeb-37cc0820484c.jpg",
+            "price": 15000
+        },
+        {
+            "id": 28,
+            "title": "Rockstar energetik",
+            "img": "https://images.uzum.uz/cq772jpbjcvc78ismgb0/original.jpg",
+            "price": 15000
+        },
+        {
+            "id": 29,
+            "title": "Hot Lunch",
+            "img": "https://nmedov.uz/wp-content/uploads/2022/07/1736185565_Hot-lunch_90gr_chicken_spice-1-1-e1736168219221-768x637.png",
+            "price": 4500
+        },
+        {
+            "id": 30,
+            "title": "Chupa Chups",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYX2xGGbETmeCLPAoCZsCZhazSZCQtgigz5Q&s",
+            "price": 1500
+        }
+    ]
+}
