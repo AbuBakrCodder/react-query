@@ -17,7 +17,12 @@ export const createUser = async (newUser) => {
     return res.data
 }
 
-export const deleteUser = async (id)=>{
+export const deleteUser = async (id) => {
     const res = await axiosInstance.delete(`/users/${id}`)
     return res.data
+}
+
+export const updateUser = async ({ id, updatedUser }) => {
+  const res = await axiosInstance.put(`/users/${id}`, updatedUser)
+  return res.data
 }

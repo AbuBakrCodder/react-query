@@ -1,18 +1,37 @@
+import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
+import { updateUser } from "../lib/requests"
 
-function UserForm({ mutation }) {
+function UserForm({ mutation, setUpdateData, uptadeData, updateMutation }) {
     const {
         register,
         handleSubmit,
         formState: { isSubmitting, errors },
         reset,
+        setValue
     } = useForm()
 
     const formSubmit = (data) => {
-        mutation.mutate(data)
+        if (uptadeData) {
+            updateMutation.mutate({
+                id: uptadeData.id,
+                updatedUser: data,
+            })
+
+        } else {
+            mutation.mutate(data)
+        }
         reset()
     }
+
+    useEffect(() => {
+        if (uptadeData) {
+            setValue("name", uptadeData.name)
+            setValue("email", uptadeData.email)
+        }
+    }, [uptadeData])
+
 
     return (
         <div className="w-full flex items-center justify-center px-2 sm:px-4">
@@ -27,7 +46,7 @@ function UserForm({ mutation }) {
         "
             >
                 <h1 className="text-xl sm:text-2xl md:text-3xl text-gray-800 font-bold text-center py-3 sm:py-5">
-                    Create new user
+                    {uptadeData === null ? "Create new user" : "Edit user"}
                 </h1>
 
                 <div className="flex flex-col gap-2 sm:gap-3 w-full">
@@ -90,8 +109,27 @@ function UserForm({ mutation }) {
             disabled:opacity-60
           "
                 >
-                    Submit
+                    {isSubmitting ? "Loading..." : uptadeData ? "Edit" : "Submit"}
                 </button>
+                {uptadeData && <button
+                    disabled={isSubmitting}
+                    className="
+            bg-gray-100
+            px-6 sm:px-10
+            py-3 sm:py-5
+            rounded-2xl
+            mt-4 sm:mt-3
+            text-base sm:text-xl md:text-2xl
+            font-semibold
+            transition-all
+            md:hover:scale-110
+            disabled:opacity-60
+          "
+                    type="button"
+                    onClick={() => { setUpdateData(null) }}
+                >
+                    Cancel
+                </button>}
             </form>
         </div>
     )

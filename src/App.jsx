@@ -1,11 +1,15 @@
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query'
 import UserForm from './components/UserForm'
-import { createUser, deleteUser, getUsers } from './lib/requests'
+import { createUser, deleteUser, getUsers, updateUser } from './lib/requests'
 import toast from 'react-hot-toast'
 import { FaTrash } from 'react-icons/fa'
+import { FaPencil } from 'react-icons/fa6'
+import { MdOutlineCancel } from "react-icons/md";
+import { useState } from 'react'
 
 function App() {
   const queryClient = useQueryClient()
+  const [uptadeData, setUpdateData] = useState(null)
 
   // Get users
   const { data: users, isLoading, isError, error } = useQuery({
@@ -36,6 +40,19 @@ function App() {
     },
   })
 
+  const updateMutation = useMutation({
+    mutationFn: updateUser,
+    onSuccess: (newUser) => {
+      queryClient.setQueriesData(['users'], (oldUsers = []) =>
+        oldUsers.map((user) =>
+          user.id === newUser.id ? newUser : user
+        )
+      )
+      toast.success('User updated successfully!')
+      setUpdateData(null)
+    },
+  })
+
   const handeleDelete = (id) => {
     deleteMutation.mutate(id)
   }
@@ -52,11 +69,14 @@ function App() {
       </h2>
     )
 
+  console.log(uptadeData);
+
+
   return (
     <div className="min-h-screen bg-gray-100 py-6 sm:py-8 px-2 sm:px-0">
-      <UserForm mutation={mutation} />
+      <UserForm mutation={mutation} setUpdateData={setUpdateData} uptadeData={uptadeData} updateMutation={updateMutation} />
 
-      <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 text-gray-800">
+      <h1 className="text-center text-2xl sm:text-3xl md:text-4xl mt-10 font-bold mb-6 sm:mb-10 text-gray-800">
         Users
       </h1>
 
@@ -80,6 +100,34 @@ function App() {
               {user.email}
             </p>
 
+            {uptadeData?.id !== user.id && (
+              <button
+                onClick={() => setUpdateData(user)}
+                className="
+      text-blue-400 absolute
+      top-10 left-70 sm:top-4 sm:right-4
+      p-2 transition-all
+      md:hover:scale-125 md:hover:text-blue-700
+    "
+              >
+                <FaPencil />
+              </button>
+            )}
+
+            {uptadeData?.id == user.id &&
+              <button
+                onClick={() => { setUpdateData(null) }}
+                className="
+            text-red-500 absolute
+            top-10 left-70 sm:top-4 sm:right-4
+            p-2
+            transition-all
+            md:hover:scale-125 hover:text-red-900
+            "
+              >
+                <MdOutlineCancel />
+              </button>
+            }
             <button
               onClick={() => handeleDelete(user.id)}
               className="
